@@ -32,6 +32,8 @@ path add /usr/bin/vendor_perl
 
 path add ~/.cargo/bin
 
+$env.DOCKER_HOST = 'unix:///run/podman/podman.sock'
+
 $env.COLORTERM = 'truecolor'
 $env.EDITOR = (which nvim | get path.0)
 $env.PAGER = 'less'
