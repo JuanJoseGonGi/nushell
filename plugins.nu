@@ -18,6 +18,6 @@ source ~/.config/nushell/plugins/nu_scripts/custom-completions/rg/rg-completions
 source ~/.config/nushell/plugins/nu_scripts/custom-completions/ssh/ssh-completions.nu
 source ~/.config/nushell/plugins/nu_scripts/custom-completions/auto-generate/completions/aws.nu
 source ~/.config/nushell/plugins/nu_scripts/custom-completions/auto-generate/completions/terraform.nu
-source ~/.config/nushell/plugins/nu_scripts/modules/aws/select-aws-profile.nu
 
+use ~/.config/nushell/plugins/nu_scripts/modules/aws/select-aws-profile.nu
 use ~/.config/nushell/plugins/nu_scripts/modules/virtual_environments/venv.nu
