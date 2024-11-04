@@ -42,16 +42,22 @@ $env.BROWSER = 'wsl-open'
 
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
 let carapace_config = (carapace _carapace nushell)
-if ($carapace_config != (cat ~/.config/nushell/plugins/carapace.nu)) {
-  carapace _carapace nushell | save --force ~/.config/nushell/plugins/carapace.nu
+let carapace_plugin_file = "~/.config/nushell/plugins/carapace.nu"
+let carapace_plugin_exists = ($carapace_plugin_file | path exists)
+if (not $carapace_plugin_exists or $carapace_config != ($carapace_plugin_file | open --raw)) {
+  carapace _carapace nushell | save --force $carapace_plugin_file
 }
 
 let zoxide_config = (zoxide init nushell)
-if ($zoxide_config != (cat ~/.config/nushell/plugins/zoxide.nu)) {
-    zoxide init nushell | save -f ~/.config/nushell/plugins/zoxide.nu
+let zoxide_plugin_file = "~/.config/nushell/plugins/zoxide.nu"
+let zoxide_plugin_exists = ($zoxide_plugin_file | path exists)
+if (not $zoxide_plugin_exists or $zoxide_config != ($zoxide_plugin_file | open --raw)) {
+    zoxide init nushell | save -f $zoxide_plugin_file
 }
 
 let starship_config = (starship init nu)
-if ($starship_config != (cat ~/.config/nushell/plugins/starship.nu)) {
-    starship init nu | save -f ~/.config/nushell/plugins/starship.nu
+let starship_plugin_file = "~/.config/nushell/plugins/starship.nu"
+let starship_plugin_exists = ($starship_plugin_file | path exists)
+if (not $starship_plugin_exists or $starship_config != ($starship_plugin_file | open --raw)) {
+    starship init nu | save -f $starship_plugin_file
 }
