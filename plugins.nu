@@ -1,7 +1,7 @@
 source ~/.config/nushell/alias.nu
-source ~/.config/nushell/completion.nu
 
 source /opt/asdf-vm/asdf.nu
+source ~/.config/nushell/plugins/carapace.nu
 source ~/.config/nushell/plugins/zoxide.nu
 use ~/.config/nushell/plugins/starship.nu
 

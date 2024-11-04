@@ -40,6 +40,12 @@ $env.PAGER = 'less'
 $env.TERM = 'xterm-256color'
 $env.BROWSER = 'wsl-open'
 
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
+let carapace_config = (carapace _carapace nushell)
+if ($carapace_config != (cat ~/.config/nushell/plugins/carapace.nu)) {
+  carapace _carapace nushell | save --force ~/.config/nushell/plugins/carapace.nu
+}
+
 let zoxide_config = (zoxide init nushell)
 if ($zoxide_config != (cat ~/.config/nushell/plugins/zoxide.nu)) {
     zoxide init nushell | save -f ~/.config/nushell/plugins/zoxide.nu
