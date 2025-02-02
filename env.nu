@@ -32,6 +32,8 @@ path add /usr/bin/vendor_perl
 
 path add ~/.cargo/bin
 
+path add /opt/cuda/bin
+
 $env.DOCKER_HOST = 'unix:///run/podman/podman.sock'
 
 $env.COLORTERM = 'truecolor'
