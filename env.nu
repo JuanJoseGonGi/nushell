@@ -36,6 +36,8 @@ path add /opt/cuda/bin
 
 path add ~/.turso
 
+path add ~/.local/bin
+
 $env.DOCKER_HOST = 'unix:///run/podman/podman.sock'
 
 $env.COLORTERM = 'truecolor'
