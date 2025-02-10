@@ -1,6 +1,5 @@
 source ~/.config/nushell/alias.nu
 
-source /opt/asdf-vm/asdf.nu
 source ~/.config/nushell/plugins/carapace.nu
 source ~/.config/nushell/plugins/zoxide.nu
 use ~/.config/nushell/plugins/starship.nu
@@ -18,6 +17,8 @@ source ~/.config/nushell/plugins/nu_scripts/custom-completions/rg/rg-completions
 source ~/.config/nushell/plugins/nu_scripts/custom-completions/ssh/ssh-completions.nu
 source ~/.config/nushell/plugins/nu_scripts/custom-completions/auto-generate/completions/aws.nu
 source ~/.config/nushell/plugins/nu_scripts/custom-completions/auto-generate/completions/terraform.nu
+source ~/.asdf/completions/nushell.nu
+source ~/.config/nushell/plugins/asdf.nu
 
 use ~/.config/nushell/plugins/nu_scripts/modules/aws/select-aws-profile.nu
 use ~/.config/nushell/plugins/nu_scripts/modules/virtual_environments/venv.nu

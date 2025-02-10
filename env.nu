@@ -26,8 +26,6 @@ path add $env.PNPM_HOME
 
 path add /usr/bin/go ($env.HOME | path join go/bin)
 
-$env.ASDF_DIR = '/opt/asdf-vm/'
-
 path add /usr/bin/vendor_perl
 
 path add ~/.cargo/bin
