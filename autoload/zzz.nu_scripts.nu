@@ -9,9 +9,12 @@ source ~/.config/nushell/nu_scripts/custom-completions/npm/npm-completions.nu
 source ~/.config/nushell/nu_scripts/custom-completions/pnpm/pnpm-completions.nu
 source ~/.config/nushell/nu_scripts/custom-completions/rg/rg-completions.nu
 source ~/.config/nushell/nu_scripts/custom-completions/ssh/ssh-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/cargo/cargo-completions.nu
+source ~/.config/nushell/nu_scripts/custom-completions/rustup/rustup-completions.nu
 source ~/.config/nushell/nu_scripts/custom-completions/auto-generate/completions/aws.nu
 source ~/.config/nushell/nu_scripts/custom-completions/auto-generate/completions/terraform.nu
 source ~/.config/nushell/nu_scripts/custom-completions/auto-generate/completions/fzf.nu
+source ~/.config/nushell/nu_scripts/custom-completions/auto-generate/completions/rustc.nu
 
 use ~/.config/nushell/nu_scripts/modules/aws/select-aws-profile.nu
 use ~/.config/nushell/nu_scripts/modules/virtual_environments/venv.nu
