@@ -30,7 +30,7 @@ export def --env load-sh-env [file: string] {
         }} |
         reduce --fold {} {|it, acc| $acc | merge $it} |
         transpose key value |
-        filter {|kv|
+        where {|kv|
             ($kv.key | is-not-empty) and (
                 not ($kv.key in $base_env)
                 or (($base_env | get $kv.key) != $kv.value)
@@ -49,7 +49,7 @@ export def --env load-env-file [file: string] {
         str trim |
         split row (char newline) |
         each {|str| $str | str trim} |
-        filter {|str| $str !~ '^#' and ($str | is-not-empty)} |
+        where {|str| $str !~ '^#' and ($str | is-not-empty)} |
         each {|str| $"export ($str)"} |
         str join (char newline)
 
@@ -57,7 +57,7 @@ export def --env load-env-file [file: string] {
 
     $with_env |
         transpose key value |
-        filter {|kv|
+        where {|kv|
             ($kv.key | is-not-empty) and (
                 not ($kv.key in $base_env)
                 or (($base_env | get $kv.key) != $kv.value)
